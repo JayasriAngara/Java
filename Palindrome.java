@@ -1,20 +1,17 @@
-public class Palindrome {
-
-	public boolean isPalindrome(String inputString) {
-	    if (inputString.length() == 0) {
-	        return true;
-	    } else {
-	    	String rev = "";
-	    	int length = inputString.length();
-
-	        for ( int i = length - 1; i >= 0; i-- )
-	           rev = rev + inputString.charAt(i);
-
-	        if (inputString.equals(rev))
-	           return true;
-	        else
-	           return false;
-	    }
-	}
-
-}
+class Palindrome{  
+ public static void main(String args[]){  
+  int r,sum=0,temp;    
+  int n=454;//It is the number variable to be checked for palindrome  
+  
+  temp=n;    
+  while(n>0){    
+   r=n%10;  //getting remainder  
+   sum=(sum*10)+r;    
+   n=n/10;    
+  }    
+  if(temp==sum)    
+   System.out.println("palindrome number ");    
+  else    
+   System.out.println("not palindrome");    
+}  
+}  
